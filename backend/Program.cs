@@ -36,6 +36,11 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
+app.MapGet("/bad-endpoint", () => {
+    string connectionString = "Server=myServer;Database=myDB;User=myUser;Password=myPassword;";
+    return connectionString;
+});
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
