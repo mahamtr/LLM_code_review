@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  ngOnInit() {
+    document.body.style.backgroundColor = 'red'; 
+    console.log('This is a debug log that should not be in production'); 
+  }
 }
